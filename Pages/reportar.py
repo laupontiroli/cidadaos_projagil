@@ -20,11 +20,11 @@ with col1:
     
 
 with col2: 
-    problema_tipo = st.selectbox("Tipo de problema",("Buraco na via","buraco na calçada","luz queimada",'farol queimado','outro'))
-    if problema_tipo == "outro":
-        problema_tipo = st.text_input("escreva aqui o problema em poucas palavras")
-    urgencia = st.radio("nível de urgência",('extrema','mediana','minima'))
-    problema_descricao =st.text_area("Relate o problema",placeholder="detalhe bem sobre o problema, desde quando, dificuldades que está causando, etc")
+    problema_tipo = st.selectbox("Tipo de problema",("Buraco na via","Buraco na calçada","Luz queimada",'Farol queimado','Outro'))
+    if problema_tipo == "Outro":
+        problema_tipo = st.text_input("Escreva aqui o problema em poucas palavras")
+    urgencia = st.radio("Nível de urgência",('Extrema','Mediana','Mínima'))
+    problema_descricao =st.text_area("Relate o problema",placeholder="Detalhe bem sobre o problema, desde quando, dificuldades que está causando, etc.")
     data_inicio = st.date_input("Desde quando este problema existe ou desde quando você o percebeu?",format='DD/MM/YYYY')
 
 
