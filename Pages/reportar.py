@@ -31,9 +31,10 @@ with col2:
 if st.button("Enviar Formulario"):
     if foto:
             save_uploaded_file(foto)
-    data = {'bairro': bairro,'rua': rua, 'problema_tipo':problema_tipo, 'urgencia': urgencia, 'problema_descricao': problema_descricao,'data_inicio':data_inicio}
+    data = {'bairro': bairro ,'rua': rua, 'problema_tipo':problema_tipo, 'urgencia': urgencia, 'problema_descricao': problema_descricao,'data_inicio': data_inicio}
     file= {'foto':open(f'./photos/{foto.name}','rb')}
-    uts.registra_problema(data,file)
+    salvou = uts.registra_problema(data,file)
+    st.write(salvou)
     
 
 
