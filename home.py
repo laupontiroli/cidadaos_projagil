@@ -27,7 +27,6 @@ if result:
         st.write(result.get("GET_LOCATION"))
 
 
-
 st.markdown('<h1 style="color: rgb(47, 194, 192);">Reporta Cidade</h1>', unsafe_allow_html=True)
 
 st.sidebar.title('Menu')
