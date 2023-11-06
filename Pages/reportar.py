@@ -3,12 +3,24 @@ import os
 import api_utils as uts
 from time import sleep 
 
+st.set_page_config(page_title='Reporta Cidade', page_icon=':cityscape:', layout='wide', initial_sidebar_state='auto')
+
+
 def save_uploaded_file(uploadedfile):
   with open(os.path.join("./photos",uploadedfile.name),"wb") as f:
      f.write(uploadedfile.getbuffer())
   return True
 
 st.title('Informações sobre o Problema')
+
+st.sidebar.title('Menu')
+st.markdown("""
+<style>
+    [data-testid=stSidebar] {
+        background-color: rgba(53, 219, 217,0.6);
+    }
+</style>
+""", unsafe_allow_html=True)
 
 st.divider()
 with st.form("Formulário",clear_on_submit=True):

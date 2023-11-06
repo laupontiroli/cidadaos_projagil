@@ -26,15 +26,13 @@ if result:
     if "GET_LOCATION" in result:
         st.write(result.get("GET_LOCATION"))
 
-import streamlit as st
-from utils import *
 
 
-st.title('Reporta Cidade')
+st.markdown('<h1 style="color: rgb(47, 194, 192);">Reporta Cidade</h1>', unsafe_allow_html=True)
 
 st.sidebar.title('Menu')
 
-st.write('## Algum problema na cidade para reportar?')
+st.write('### Algum problema na cidade para reportar?')
 
 st.write("""Buracos nas ruas e avenidas?""")
 st.write(' Falta de sinalização?')
@@ -44,4 +42,20 @@ st.write('Vazamento de água ou esgoto? ')
 st.write(' Falta de rampas para deficientes?')
 st.write('...')
 
-st.write('### Para reportar clique em "reportar" na aba do menu!')
+st.markdown('### <span style="color:#e74c3c">Para reportar clique no botão abaixo!</span>', unsafe_allow_html=True)
+
+
+st.markdown("""
+<style>
+    [data-testid=stSidebar] {
+        background-color: rgba(53, 219, 217,0.6);
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown(
+    '''
+    <a href="/reportar" style="display: inline-block; background-color: #e74c3c; color: #000000; text-align: center; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Reportar</a>
+    ''',
+    unsafe_allow_html=True
+)
