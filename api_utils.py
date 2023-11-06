@@ -9,9 +9,6 @@ def give_lat_lon(rua,bairro):
 
     geocode = lambda query, **kw: geolocator.geocode("%s Sao Paulo" % query, **kw)
 
-    rua = 'Doutor Joao Batista Vasques'
-    bairro = 'Vila Augusta'
-
     result = geocode(f'{rua},{bairro}',language="pt-BR")
 
     return result.latitude,result.longitude
