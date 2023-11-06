@@ -3,8 +3,6 @@ import os
 import api_utils as uts
 from time import sleep 
 
-st.set_page_config(page_title='Reporta Cidade', page_icon=':cityscape:', layout='wide', initial_sidebar_state='auto')
-
 
 def save_uploaded_file(uploadedfile):
   with open(os.path.join("./photos",uploadedfile.name),"wb") as f:
@@ -19,6 +17,7 @@ st.markdown("""
         background-color: rgba(53, 219, 217,0.6);
     }
     [data-testid="stSidebarNav"]::before {
+        font-weight : 600;
         content: "Menu";
         margin-left: 20px;
         font: Helvica Bold;

@@ -2,8 +2,9 @@ import streamlit as st
 
 st.set_page_config(page_title='Reporta Cidade', page_icon=':cityscape:', layout='wide', initial_sidebar_state='auto')
 
-st.markdown('<h1 style="color: rgb(47, 194, 192);">Reporta Cidade</h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="color: rgb(47, 194, 192); text-align: center ">Reporta Cidade</h1>', unsafe_allow_html=True)
 
+st.divider()
 st.write('### Algum problema na cidade para reportar?')
 
 st.write("""Buracos nas ruas e avenidas?""")
@@ -23,6 +24,7 @@ st.markdown("""
         background-color: rgba(53, 219, 217,0.6);
     }
     [data-testid="stSidebarNav"]::before {
+        font-weight : 600;
         content: "Menu";
         margin-left: 20px;
         font: Helvica Bold;

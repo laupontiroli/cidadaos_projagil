@@ -14,70 +14,7 @@ def obter_info_reclamacao(codigo):
 
     return reclamacoes.get(codigo, None)
 
-# def main():
-#     st.markdown(
-#         """
-#         <style>
-#         body {
-#             background-color: #8470ff;
-#             overflow: hidden;
-#         }
-#         .menu-lateral {
-#             position: fixed;
-#             top: 0;
-#             left: 0;
-#             width: 200px;
-#             height: 100%;
-#             background-color: #2e2e2e;
-#             color: white;
-#             padding: 20px;
-#         }
-#         .menu-lateral a {
-#             display: block;
-#             color: white;
-#             text-decoration: none;
-#             margin-bottom: 15px;
-#         }
-#         .menu-lateral a:hover {
-#             color: #8470ff;
-#         }
-#         .menu-lateral .logo {
-#             font-size: 24px;
-#             font-weight: bold;
-#             margin-bottom: 30px;
-#         }
-#         .conteudo {
-#             margin-left: 230px;
-#             padding: 20px;
-#         }
-#         .titulo {
-#             font-size: 30px;
-#             margin-bottom: 20px;
-#             color: #2e2e2e;
-#         }
-#         .subtitulo {
-#             font-size: 20px;
-#             margin-bottom: 10px;
-#             color: #2e2e2e;
-#         }
-#         </style>
-#         """,
-#         unsafe_allow_html=True
-#     )
 
-#     st.sidebar.markdown(
-#         """
-#         <div class="menu-lateral">
-#             <div class="logo">Denúncias Urbanas</div>
-#             <a href="#inicio">Início</a>
-#             <a href="#reportar">Reportar</a>
-#             <a href="#acompanhar">Acompanhar Resolução</a>
-#             <a href="#fale-conosco">Fale Conosco</a>
-#             <a href="#sobre">Sobre</a>
-#         </div>
-#         """,
-#         unsafe_allow_html=True
-#     )
 st.markdown("<h1 id='inicio' class='titulo'>Acompanhe a resolução de algum problema</h1>", unsafe_allow_html=True)
 st.markdown("""
 <style>
@@ -85,6 +22,7 @@ st.markdown("""
         background-color: rgba(53, 219, 217,0.6);
     }
     [data-testid="stSidebarNav"]::before {
+        font-weight : 600;
         content: "Menu";
         margin-left: 20px;
         font: Helvica Bold;
@@ -112,5 +50,3 @@ else:
     if codigo_reclamacao:
         st.error("Reclamação não encontrada. Verifique o código inserido.")
 
-# if __name__ == '__main__':
-# main()
