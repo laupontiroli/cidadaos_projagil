@@ -13,12 +13,20 @@ def save_uploaded_file(uploadedfile):
 
 st.title('Informações sobre o Problema')
 
-st.sidebar.title('Menu')
 st.markdown("""
 <style>
     [data-testid=stSidebar] {
         background-color: rgba(53, 219, 217,0.6);
     }
+    [data-testid="stSidebarNav"]::before {
+        content: "Menu";
+        margin-left: 20px;
+        font: Helvica Bold;
+        margin-top: 20px;
+        font-size: 30px;
+        position: relative;
+        top: 100px;
+        }
 </style>
 """, unsafe_allow_html=True)
 
