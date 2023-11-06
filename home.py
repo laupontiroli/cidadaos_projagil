@@ -38,7 +38,7 @@ st.markdown("""
 
 st.markdown(
     '''
-    <a href="/Reportar" style="display: inline-block; background-color: #e74c3c; color: #000000; text-align: center; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Reportar</a>
+    <a href="/reportar" style="display: inline-block; background-color: #e74c3c; color: #000000; text-align: center; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Reportar</a>
     ''',
     unsafe_allow_html=True
 )

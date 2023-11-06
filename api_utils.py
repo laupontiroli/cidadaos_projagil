@@ -1,4 +1,21 @@
 import requests
+from geopy.geocoders import Nominatim
+
+
+# teste usando o geopy, coders pra achar latitude e longitude pro bubblemap 
+
+def give_lat_lon(rua,bairro):
+    geolocator = Nominatim(user_agent="teste")
+
+    geocode = lambda query, **kw: geolocator.geocode("%s Sao Paulo" % query, **kw)
+
+    rua = 'Doutor Joao Batista Vasques'
+    bairro = 'Vila Augusta'
+
+    result = geocode(f'{rua},{bairro}',language="pt-BR")
+
+    return result.latitude,result.longitude
+
 
 BASE_URL = "http://localhost:4800"
 
