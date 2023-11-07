@@ -14,7 +14,7 @@ def give_lat_lon(rua,bairro):
     return result.latitude,result.longitude
 
 
-BASE_URL = "http://127.0.0.1:4800"
+BASE_URL = "https://reporta-cidade-oficial-5b9160e3f04e.herokuapp.com"
 
 def registra_problema(data,file):
     try:
